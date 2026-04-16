@@ -6,6 +6,7 @@ Reusable [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skills fo
 
 | Skill | Description |
 |-------|-------------|
+| [`document-process`](./document-process/) | Generate comprehensive architecture documentation for any process or data flow — autonomously explores the codebase, traces call chains, and produces a detailed markdown document with diagrams, tables, and file references |
 | [`investigate-bug`](./investigate-bug/) | Systematically investigate production bugs — traces error logs to root cause, gathers evidence from code/DB/traces, and produces a comprehensive bug report |
 
 ## Installation
@@ -21,9 +22,10 @@ git clone https://github.com/<your-username>/claude-code-skills.git
 cp -r claude-code-skills/investigate-bug /path/to/your/project/.claude/skills/
 ```
 
-Then invoke it in Claude Code:
+Then invoke in Claude Code:
 
 ```
+/document-process "TTS audio generation pipeline" docs/tts-architecture.md
 /investigate-bug FFmpeg failed with exit code 234, trace ID abc123
 ```
 
